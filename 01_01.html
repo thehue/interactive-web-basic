@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      .box-container {
+        display: flex;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        background: rgba(255, 255, 0, 0.7);
+        transition: 1s 2s cubic-bezier(0.25, 0.1, 0.81, 0.07);
+      }
+
+      .box:hover {
+        /*transform: scale(2) rotate(45deg);*/
+        /*transform-origin: right bottom; /*가로 세로 left top-> 0% 0% // 50% 50% -> center center(default)*/
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Transform</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+      mollitia distinctio odio quaerat. Itaque repellendus ab sed fugiat,
+      eligendi pariatur labore suscipit tempora fugit laudantium nihil nobis
+      molestias facere voluptate doloribus accusamus eos officiis ex, libero
+      nisi eius harum? Facere, ipsum maiores odio nisi veritatis qui id error
+      voluptates officia provident quis necessitatibus maxime eum mollitia
+      incidunt perspiciatis nam exercitationem saepe quod consequuntur hic at
+      eligendi rerum quos! Quia nesciunt laboriosam labore commodi praesentium
+      aliquid voluptatem tempora velit. Recusandae quibusdam officia assumenda
+      impedit omnis velit est aspernatur in ab aperiam culpa modi corrupti
+      veritatis sed quas eligendi, deleniti consequatur voluptatum!
+    </p>
+    <div class="box-container">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+    </div>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem est ex
+      delectus alias, voluptatum illo magni mollitia dicta officia asperiores ad
+      repellendus quaerat laborum qui modi nam sequi consequatur excepturi
+      aliquam iure iste quisquam architecto? Sunt, fuga corporis. Vel iste
+      suscipit sunt deleniti tenetur, perferendis quam cum culpa, sapiente
+      maiores architecto a maxime, iure ex voluptate? Porro, vel! Doloribus
+      expedita nobis quam molestiae! Sit tempore delectus nulla eos fugiat esse
+      voluptatem, porro, culpa nostrum suscipit optio ut itaque quaerat. Omnis
+      magni amet repudiandae, modi quod magnam dolorum iure totam animi
+      praesentium aperiam facilis est sit porro harum odit necessitatibus eius.
+    </p>
+  </body>
+</html>
