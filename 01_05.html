@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web</title>
+    <style>
+      .container {
+        display: flex;
+        /*flex-direction: row;*/
+        /*justify-content: flext-start*/ /* 축방향으로 나열하는것*/
+        /*align-items: stretch;*/ /* 축방향의 수직으로 나열 */
+        height: 80vh; /* 브라우저 높이의 절반 */
+        background: gray;
+      }
+
+      .item {
+        /*flex-grow: 1;*/ /* 여백을 같게 두는 것*/
+        font-size: 3rem;
+        /*flex-grow: 1;
+        flex-basis: 0; /* 기존에 갖고 있던 폭이 0으로 인식되면서 동일하게 간격을 갖게 한다*/
+        flex: 1; /* 위의 주석과 동일함 */
+        border: 3px solid black;
+        background: white;
+      }
+
+      /*
+      .item:nth-child(1) {
+        flex-grow: 1;
+      }
+      .item:nth-child(2) {
+        flex-grow: 2;
+      }
+      .item:nth-child(3) {
+        flex-grow: 3;
+      }
+      .item:nth-child(4) {
+        flex-grow: 4;
+      }
+      .item:nth-child(5) {
+        flex-grow: 5;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">AAA</div>
+      <div class="item">B</div>
+      <div class="item">CCCCC</div>
+      <div class="item">DDD</div>
+      <div class="item">E</div>
+    </div>
+  </body>
+</html>
