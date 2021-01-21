@@ -1,12 +1,14 @@
 (function () {
-  const ilbuniGroup = document.querySelectorAll('.ilbuni');
+  // 이벤트 위임
   const stage = document.querySelector('.stage');
 
   const clickHandler = (e) => {
-    stage.removeChild(e.currentTarget);
+    console.log(e.target);
+    if (!e.target.classList.contains('ilbuni')) {
+      return;
+    }
+    stage.removeChild(e.target);
   };
 
-  ilbuniGroup.forEach((el, index) => {
-    el.addEventListener('click', clickHandler);
-  });
+  stage.addEventListener('click', clickHandler);
 })();
