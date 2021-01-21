@@ -43,3 +43,22 @@
   width: 50px;
   /* pointer-events: none; */
 }
+
+.cursor_default {
+  cursor: auto;
+}
+
+.cursor_0 {
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png) 20 20,
+    auto !important;
+}
+
+.cursor_1 {
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png) 20 20,
+    auto !important;
+}
+
+.cursor_2 {
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png) 20 20,
+    auto !important;
+}
