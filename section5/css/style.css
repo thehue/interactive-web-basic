@@ -1,0 +1,45 @@
+.menu {
+  width: 60vw;
+  height: 20vw;
+  background: #f5f5f6;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 1em;
+  padding: 0.5em 1em 0.5em 0.5em;
+  border: 5px solid white;
+  outline: 0;
+  font: 900 1.2rem NotoSans;
+  background: linear-gradient(
+    0deg,
+    rgba(223, 210, 0, 1),
+    rgba(255, 240, 0, 1) 50%,
+    white
+  );
+  width: 25%;
+  height: 90px;
+  vertical-align: top;
+  border-radius: 20px;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.btn-label {
+  text-shadow: rgba(255, 255, 255, 1) 0 1px 0;
+  /* pointer-events: none; 완전 중요 */
+}
+
+.icon {
+  width: 50px;
+  /* pointer-events: none; */
+}
