@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>requestAnimationFrame</title>
+    <style>
+      .timer {
+        width: 200px;
+        height: 80px;
+        outline: 2px dashed gray;
+        font-size: 2rem;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .btn {
+        font-size: 2rem;
+        color: #fff;
+        border-radius: 0.2em;
+        border: none;
+        padding: 0.3em;
+        outline: none;
+        cursor: pointer;
+      }
+
+      .start-btn {
+        background: dodgerblue;
+      }
+
+      .reset-btn {
+        background: #e91e63;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="timer">00:00</div>
+    <button class="start-btn btn">start</button>
+    <button class="reset-btn btn">reset</button>
+    <script>
+      let timeId;
+      const timer = document.querySelector('.timer');
+      const startBtn = document.querySelector('.start-btn');
+      const resetBtn = document.querySelector('.reset-btn');
+      let num = 0;
+
+      const startTimer = (e) => {
+        startBtn.disabled = true;
+
+        num++;
+        let time;
+
+        time = `${
+          num < 10
+            ? `00:0${num}`
+            : `${
+                Math.floor(num / 60) < 10
+                  ? `0${Math.floor(num / 60)}`
+                  : Math.floor(num / 60)
+              }:${num % 60 < 10 ? `0${num % 60}` : num % 60}`
+        }`;
+
+        timer.innerHTML = time;
+        timeId = requestAnimationFrame(startTimer);
+      };
+
+      const resetTimer = (e) => {
+        if (timeId) {
+          cancelAnimationFrame(timeId);
+
+          startBtn.disabled = false;
+          timer.innerHTML = '00:00';
+
+          num = 0;
+        }
+      };
+
+      startBtn.addEventListener('click', startTimer);
+      resetBtn.addEventListener('click', resetTimer);
+    </script>
+  </body>
+</html>
