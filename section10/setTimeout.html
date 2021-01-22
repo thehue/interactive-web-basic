@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeOut</title>
+    <style>
+      .btn {
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">취소</button>
+    <script>
+      let timeId;
+
+      function sample() {
+        alert('Timeout!');
+      }
+
+      timeId = setTimeout(sample, 2000);
+
+      function cancelTimeout() {
+        alert('취소!');
+        clearTimeout(timeId);
+      }
+
+      const btn = document.querySelector('.btn');
+      btn.addEventListener('click', cancelTimeout);
+    </script>
+  </body>
+</html>
