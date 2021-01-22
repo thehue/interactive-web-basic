@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+  </body>
+  <script>
+    /*
+    class Person {
+      constructor(nickname, age) {
+        this.nickname = nickname;
+        this.age = age;
+      }
+
+      introduce() {
+        console.log(
+          `안녕하세요. 제 이름은 ${this.nickname}이고 제 나이는 ${this.age}살 입니다.`
+        );
+      }
+    }
+
+    const person = new Person('일분이', 20);
+    person.introduce(); */
+
+    //생성자 함수
+    function Person(nickname, age) {
+      this.nickname = nickname;
+      this.age = age;
+    }
+
+    // prototype객체는 개별 인스턴스들이 공유함
+    Person.prototype.introduce = function () {
+      console.log(
+        `안녕하세요. 제 이름은 ${this.nickname}이고 제 나이는 ${this.age}살 입니다.`
+      );
+    };
+
+    // 인스턴스
+    const person1 = new Person('일분이1', 10);
+    const person2 = new Person('일분이2', 20);
+
+    // 각각의 인스턴스가 nickname, age, introduce를 개별적으로 갖게 된다. -> 메모리 점유
+    // 공통으로 갖고 있는 함수는 introduce는 공유하게 만들어야 메모리 낭비가 안된다
+    person1.introduce();
+    person2.introduce();
+  </script>
+</html>
