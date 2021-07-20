@@ -1,4 +1,4 @@
-function Character() {
+function Character(info) {
   this.mainElem = document.createElement("div");
   this.mainElem.classList.add("character");
   this.mainElem.innerHTML = `<div class="character-face-con character-head">
@@ -29,4 +29,8 @@ function Character() {
 
   this.stageElem = document.querySelector(".stage");
   this.stageElem.appendChild(this.mainElem);
+
+  const { xPos } = info;
+
+  this.mainElem.style.left = `${xPos}%`;
 }
